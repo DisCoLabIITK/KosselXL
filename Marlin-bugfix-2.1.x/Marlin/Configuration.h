@@ -931,7 +931,7 @@
   #define DELTA_ENDSTOP_ADJ { -3.858, 0.0, -2.496 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 215.0              // (mm) Get this value from G33 auto calibrate 
+  #define DELTA_RADIUS 214.26              // (mm) Get this value from G33 auto calibrate 
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
