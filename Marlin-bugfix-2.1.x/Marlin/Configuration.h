@@ -824,7 +824,7 @@
  * *** IT IS HIGHLY RECOMMENDED TO LEAVE THIS OPTION ENABLED! ***
  */
 #define PREVENT_COLD_EXTRUSION
-#define EXTRUDE_MINTEMP 170
+#define EXTRUDE_MINTEMP 190
 
 /**
  * Prevent a single extrusion longer than EXTRUDE_MAXLENGTH.
@@ -915,21 +915,23 @@
   #endif
 
   // Print surface diameter/2 minus unreachable space (avoid collisions with vertical towers).
-  #define DELTA_PRINTABLE_RADIUS 120.0    // (mm)
+  #define DELTA_PRINTABLE_RADIUS 80.0    // (mm)
 
   // Maximum reachable area
-  #define DELTA_MAX_RADIUS       125.0    // (mm)
+  #define DELTA_MAX_RADIUS       85.0    // (mm)
 
   // Center-to-center distance of the holes in the diagonal push rods.
-  #define DELTA_DIAGONAL_ROD 540.0        // (mm)
+  //#define DELTA_DIAGONAL_ROD 540.0        // (mm)
+  #define DELTA_DIAGONAL_ROD 538.0
 
   // Distance between bed and nozzle Z home position
-  #define DELTA_HEIGHT 250.00             // (mm) Get this value from G33 auto calibrate
+  //#define DELTA_HEIGHT 270.00             // (mm) Get this value from G33 auto calibrate
+  #define DELTA_HEIGHT 265.0
 
   #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 124.0              // (mm) Get this value from G33 auto calibrate
+  #define DELTA_RADIUS 240.0              // (mm) Get this value from G33 auto calibrate 
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
@@ -1104,16 +1106,16 @@
 // Mechanical endstop with COM to ground and NC to Signal uses "false" here (most common setup).
 #define X_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define Y_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define Z_MIN_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define I_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define K_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define U_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define V_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define W_MIN_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define X_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Y_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
-#define Z_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
+#define X_MAX_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
+#define Y_MAX_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
+#define Z_MAX_ENDSTOP_INVERTING true // Set to true to invert the logic of the endstop.
 #define I_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define J_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
 #define K_MAX_ENDSTOP_INVERTING false // Set to true to invert the logic of the endstop.
@@ -1183,7 +1185,7 @@
  * Override with M203
  *                                      X, Y, Z [, I [, J [, K...]]], E0 [, E1[, E2...]]
  */
-#define DEFAULT_MAX_FEEDRATE          { 200, 200, 200, 25 }
+#define DEFAULT_MAX_FEEDRATE          { 300, 300, 300, 25 }
 
 //#define LIMITED_MAX_FR_EDITING        // Limit edit via M203 or LCD to DEFAULT_MAX_FEEDRATE * 2
 #if ENABLED(LIMITED_MAX_FR_EDITING)
@@ -1282,7 +1284,7 @@
  * The probe replaces the Z-MIN endstop and is used for Z homing.
  * (Automatically enables USE_PROBE_FOR_Z_HOMING.)
  */
-#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
+//#define Z_MIN_PROBE_USES_Z_MIN_ENDSTOP_PIN
 
 // Force the use of the probe for Z-axis homing
 //#define USE_PROBE_FOR_Z_HOMING
@@ -1576,8 +1578,8 @@
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
-#define Z_PROBE_OFFSET_RANGE_MIN -20
-#define Z_PROBE_OFFSET_RANGE_MAX 20
+#define Z_PROBE_OFFSET_RANGE_MIN -10
+#define Z_PROBE_OFFSET_RANGE_MAX 10
 
 // Enable the M48 repeatability test to test probe accuracy
 //#define Z_MIN_PROBE_REPEATABILITY_TEST
@@ -1711,7 +1713,8 @@
 #define Z_MIN_POS 0
 #define X_MAX_POS DELTA_PRINTABLE_RADIUS
 #define Y_MAX_POS DELTA_PRINTABLE_RADIUS
-#define Z_MAX_POS MANUAL_Z_HOME_POS
+//#define Z_MAX_POS MANUAL_Z_HOME_POS
+#define Z_MAX_POS DELTA_HEIGHT
 //#define I_MIN_POS 0
 //#define I_MAX_POS 50
 //#define J_MIN_POS 0
@@ -2228,9 +2231,9 @@
 #define PREHEAT_1_TEMP_CHAMBER 35
 #define PREHEAT_1_FAN_SPEED     0 // Value from 0 to 255
 
-#define PREHEAT_2_LABEL       "ABS"
-#define PREHEAT_2_TEMP_HOTEND 240
-#define PREHEAT_2_TEMP_BED    110
+#define PREHEAT_2_LABEL       "PETG"
+#define PREHEAT_2_TEMP_HOTEND 210
+#define PREHEAT_2_TEMP_BED    70
 #define PREHEAT_2_TEMP_CHAMBER 35
 #define PREHEAT_2_FAN_SPEED     0 // Value from 0 to 255
 
@@ -2470,6 +2473,7 @@
  * you must uncomment the following option or it won't work.
  */
 //#define SDSUPPORT
+#define SDSUPPORT
 
 /**
  * SD CARD: ENABLE CRC
@@ -2559,6 +2563,7 @@
 // By default Marlin assumes you have a buzzer with a fixed frequency.
 //
 //#define SPEAKER
+#define SPEAKER
 
 //
 // The duration and frequency for the UI feedback sound.
