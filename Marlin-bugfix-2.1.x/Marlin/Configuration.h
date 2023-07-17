@@ -930,17 +930,18 @@
 
   // Distance between bed and nozzle Z home position
   //#define DELTA_HEIGHT 270.00             // (mm) Get this value from G33 auto calibrate
-  #define DELTA_HEIGHT 426.96
+  #define DELTA_HEIGHT 419.33
 
-  #define DELTA_ENDSTOP_ADJ { -3.858, 0.0, -2.496 } // Get these values from G33 auto calibrate
+ // #define DELTA_ENDSTOP_ADJ { -3.858, 0.0, -2.496 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { -8.88, 0.0, -10.69 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 214.26              // (mm) Get this value from G33 auto calibrate 
+  #define DELTA_RADIUS 211.89             // (mm) Get this value from G33 auto calibrate 
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { -0.029, -0.131, 0.160 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { -5.01, 0.85, 4.17 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
   //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -1249,7 +1250,7 @@
   #endif
 #endif
 
-#define DEFAULT_EJERK    20.0  // May be used by Linear Advance
+#define DEFAULT_EJERK    5.0  // May be used by Linear Advance
 
 /**
  * Junction Deviation Factor
@@ -1497,14 +1498,14 @@
  *     |    [-]    |
  *     O-- FRONT --+
  */
-#define NOZZLE_TO_PROBE_OFFSET { -44, -1, -2.85}
+#define NOZZLE_TO_PROBE_OFFSET { -44, -1, -4.22}
 
 // Most probes should stay away from the edges of the bed, but
 // with NOZZLE_AS_PROBE this can be negative for a wider probing area.
 #define PROBING_MARGIN 10
 
 // X and Y axis travel speed (mm/min) between probes
-#define XY_PROBE_FEEDRATE (133*60)
+#define XY_PROBE_FEEDRATE (60*60)
 
 // Feedrate (mm/min) for the first approach when double-probing (MULTIPLE_PROBING == 2)
 #define Z_PROBE_FEEDRATE_FAST (60*60)
@@ -1576,14 +1577,14 @@
  */
 #define Z_CLEARANCE_DEPLOY_PROBE   20 // Z Clearance for Deploy/Stow
 #define Z_CLEARANCE_BETWEEN_PROBES  10 // Z Clearance between probe points
-#define Z_CLEARANCE_MULTI_PROBE     5 // Z Clearance between multiple probes
+#define Z_CLEARANCE_MULTI_PROBE     10 // Z Clearance between multiple probes
 //#define Z_AFTER_PROBING           5 // Z position after probing is done
 
 #define Z_PROBE_LOW_POINT          -2 // Farthest distance below the trigger-point to go before stopping
 
 // For M851 give a range for adjusting the Z probe offset
-#define Z_PROBE_OFFSET_RANGE_MIN -20
-#define Z_PROBE_OFFSET_RANGE_MAX 20
+#define Z_PROBE_OFFSET_RANGE_MIN -30
+#define Z_PROBE_OFFSET_RANGE_MAX 30
 
 // Enable the M48 repeatability test to test probe accuracy
 //#define Z_MIN_PROBE_REPEATABILITY_TEST
@@ -1968,7 +1969,7 @@
 #if EITHER(AUTO_BED_LEVELING_LINEAR, AUTO_BED_LEVELING_BILINEAR)
 
   // Set the number of grid points per dimension.
-  #define GRID_MAX_POINTS_X 3
+  #define GRID_MAX_POINTS_X 5
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   // Probe along the Y axis, advancing X after each column
@@ -2021,7 +2022,7 @@
   //===========================================================================
 
   #define MESH_INSET 10          // Set Mesh bounds as an inset region of the bed
-  #define GRID_MAX_POINTS_X 3    // Don't use more than 7 points per axis, implementation limited.
+  #define GRID_MAX_POINTS_X 4    // Don't use more than 7 points per axis, implementation limited.
   #define GRID_MAX_POINTS_Y GRID_MAX_POINTS_X
 
   //#define MESH_G28_REST_ORIGIN // After homing all axes ('G28' or 'G28 XYZ') rest Z at Z_MIN_POS
@@ -2148,13 +2149,13 @@
  *    +-------------->X     +-------------->X     +-------------->Y
  *     XY_SKEW_FACTOR        XZ_SKEW_FACTOR        YZ_SKEW_FACTOR
  */
-//#define SKEW_CORRECTION
+#define SKEW_CORRECTION
 
 #if ENABLED(SKEW_CORRECTION)
   // Input all length measurements here:
-  #define XY_DIAG_AC 282.8427124746
-  #define XY_DIAG_BD 282.8427124746
-  #define XY_SIDE_AD 200
+  #define XY_DIAG_AC 27.72
+  #define XY_DIAG_BD 28.66
+  #define XY_SIDE_AD 20.00
 
   // Or, set the XY skew factor directly:
   //#define XY_SKEW_FACTOR 0.0
