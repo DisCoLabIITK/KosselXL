@@ -926,22 +926,22 @@
 
   // Center-to-center distance of the holes in the diagonal push rods.
   //#define DELTA_DIAGONAL_ROD 540.0        // (mm)
-  #define DELTA_DIAGONAL_ROD 396.0
+  #define DELTA_DIAGONAL_ROD 400.0
 
   // Distance between bed and nozzle Z home position
   //#define DELTA_HEIGHT 270.00             // (mm) Get this value from G33 auto calibrate
-  #define DELTA_HEIGHT 425.0
+  #define DELTA_HEIGHT 433.0
 
  // #define DELTA_ENDSTOP_ADJ { -3.858, 0.0, -2.496 } // Get these values from G33 auto calibrate
-  #define DELTA_ENDSTOP_ADJ { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
+  #define DELTA_ENDSTOP_ADJ { -2.91, 0.0, -2.81 } // Get these values from G33 auto calibrate
 
   // Horizontal distance bridged by diagonal push rods when effector is centered.
-  #define DELTA_RADIUS 211.89             // (mm) Get this value from G33 auto calibrate 
+  #define DELTA_RADIUS 211.0             // (mm) Get this value from G33 auto calibrate 
 
   // Trim adjustments for individual towers
   // tower angle corrections for X and Y tower / rotate XYZ so Z tower angle = 0
   // measured in degrees anticlockwise looking from above the printer
-  #define DELTA_TOWER_ANGLE_TRIM { 0.0, 0.0, 0.0 } // Get these values from G33 auto calibrate
+  #define DELTA_TOWER_ANGLE_TRIM { -0.06, -0.73, 0.79 } // Get these values from G33 auto calibrate
 
   // Delta radius and diagonal rod adjustments (mm)
   //#define DELTA_RADIUS_TRIM_TOWER { 0.0, 0.0, 0.0 }
@@ -2149,13 +2149,13 @@
  *    +-------------->X     +-------------->X     +-------------->Y
  *     XY_SKEW_FACTOR        XZ_SKEW_FACTOR        YZ_SKEW_FACTOR
  */
-//#define SKEW_CORRECTION
+#define SKEW_CORRECTION
 
 #if ENABLED(SKEW_CORRECTION)
   // Input all length measurements here:
-  #define XY_DIAG_AC 27.72
-  #define XY_DIAG_BD 28.66
-  #define XY_SIDE_AD 20.00
+  #define XY_DIAG_AC 27.76
+  #define XY_DIAG_BD 28.55
+  #define XY_SIDE_AD 20.23
 
   // Or, set the XY skew factor directly:
   //#define XY_SKEW_FACTOR 0.0
