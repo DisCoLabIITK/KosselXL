@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<Repetier-Firmware-EEPROM>
+	<epr pos="0" type="3" value="160.00">X axis resolution [Steps/mm]</epr>
+	<epr pos="1" type="3" value="160.00">Y axis resolution [Steps/mm]</epr>
+	<epr pos="2" type="3" value="160.00">Z axis resolution [Steps/mm]</epr>
+	<epr pos="3" type="3" value="691.00">E axis resolution [Steps/mm]</epr>
+	<epr pos="9" type="3" value="200.00">X axis max. feedrate [mm/s]</epr>
+	<epr pos="10" type="3" value="200.00">Y axis max. feedrate [mm/s]</epr>
+	<epr pos="11" type="3" value="200.00">Z axis max. feedrate [mm/s]</epr>
+	<epr pos="12" type="3" value="25.00">E axis max. feedrate [mm/s]</epr>
+	<epr pos="28" type="3" value="9000.00">X axis max. acceleration [mm/s²]</epr>
+	<epr pos="29" type="3" value="9000.00">Y axis max. acceleration [mm/s²]</epr>
+	<epr pos="30" type="3" value="9000.00">Z axis max. acceleration [mm/s²]</epr>
+	<epr pos="31" type="3" value="10000.00">E axis max. acceleration [mm/s²]</epr>
+	<epr pos="37" type="3" value="800.00">Acceleration printing [mm/s²]</epr>
+	<epr pos="39" type="3" value="3000.00">Acceleration retract [mm/s²]</epr>
+	<epr pos="40" type="3" value="0.00">Minimum feedrate [mm/s]</epr>
+	<epr pos="42" type="3" value="20000.00">Minimum segment time [ms]</epr>
+	<epr pos="43" type="3" value="10.00">Maximum X jerk [mm/s]</epr>
+	<epr pos="44" type="3" value="10.00">Maximum Y jerk [mm/s]</epr>
+	<epr pos="45" type="3" value="10.00">Maximum Z jerk [mm/s]</epr>
+	<epr pos="46" type="3" value="5.00">Maximum E jerk [mm/s]</epr>
+	<epr pos="157" type="3" value="0.00">Minimum travel feedrate [mm/s]</epr>
+	<epr pos="152" type="bool" value="0">Bed leveling enabled [0/1]</epr>
+	<epr pos="153" type="3" value="10.00">Bed leveling fade height [mm/s]</epr>
+	<epr pos="137" type="3" value="213.77">Delta radius [mm]</epr>
+	<epr pos="138" type="3" value="400.00">Delta diagonal rod [mm]</epr>
+	<epr pos="139" type="3" value="200.00">Delta segments per second [1/s]</epr>
+	<epr pos="140" type="3" value="0.00">Delta diagonal rod trim tower 1 [mm]</epr>
+	<epr pos="141" type="3" value="0.00">Delta diagonal rod trim tower 2 [mm]</epr>
+	<epr pos="142" type="3" value="0.00">Delta diagonal rod trim tower 3 [mm]</epr>
+	<epr pos="134" type="3" value="-1.42">X endstop adjustment [mm]</epr>
+	<epr pos="135" type="3" value="-0.20">Y endstop adjustment [mm]</epr>
+	<epr pos="136" type="3" value="-2.24">Z endstop adjustment [mm]</epr>
+	<epr pos="81" type="2" value="180">Preheat 1 Extruder temperature [°C]</epr>
+	<epr pos="82" type="2" value="70">Preheat 1 Bed temperature [°C]</epr>
+	<epr pos="83" type="2" value="0">Preheat 1 Fan speed [0-255]</epr>
+	<epr pos="84" type="2" value="210">Preheat 2 Extruder temperature [°C]</epr>
+	<epr pos="85" type="2" value="70">Preheat 2 Bed temperature [°C]</epr>
+	<epr pos="86" type="2" value="0">Preheat 2 Fan speed [0-255]</epr>
+	<epr pos="90" type="3" value="16.82">PID P</epr>
+	<epr pos="91" type="3" value="1.42">PID I</epr>
+	<epr pos="92" type="3" value="49.77">PID D</epr>
+	<epr pos="126" type="3" value="267.00">Heated bed PID P</epr>
+	<epr pos="127" type="3" value="47.00">Heated bed PID I</epr>
+	<epr pos="128" type="3" value="1011.00">Heated bed PID D</epr>
+	<epr pos="143" type="2" value="255">LCD contrast [0-255]</epr>
+</Repetier-Firmware-EEPROM>
